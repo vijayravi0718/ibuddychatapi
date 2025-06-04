@@ -79,8 +79,12 @@ app.post('/addUser', (req, res) => {
   res.json({ message: 'User added successfully', user: { name, number } });
 });
 
-app.listen(PORT, () => {
-  console.log(`✅ Server running at http://localhost:${PORT}`);
-  console.log(`📘 Swagger docs at http://localhost:${PORT}/api-docs`);
+// app.listen(PORT, () => {
+//   console.log(`✅ Server running at http://localhost:${PORT}`);
+//   console.log(`📘 Swagger docs at http://localhost:${PORT}/api-docs`);
   
+// });
+
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`✅ Server running at http://0.0.0.0:${PORT}`);
 });
